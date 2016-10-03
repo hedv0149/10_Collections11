@@ -36,11 +36,15 @@ namespace _10_Collections
         public void AddAsset(IAsset classInstance)
         {
             stocks.Add(classInstance);
+            //if()
+            //{
+            //    throw new NotSupportedException("Unable to add an asset to the returned collection. Collection is ReadOnly");
+            //}
         }
 
         internal IList<IAsset> GetAssets()
         {
-            return stocks;
+            return stocks.AsReadOnly();
         }
 
         //public void AddAsset(SavingsAccount cd1000)
